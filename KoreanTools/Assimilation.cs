@@ -29,7 +29,7 @@ namespace KoreanTools
             {"ㅇㄹ", "ㅇㄴ" },
         };
 
-        static Dictionary<string, string> ImpolosionTable = new Dictionary<string, string>()
+        static Dictionary<string, string> ImplosionTable = new Dictionary<string, string>()
         {
             {"ㄱ", "ㄱ" },
             {"ㅋ", "ㄱ" },
@@ -52,7 +52,7 @@ namespace KoreanTools
         static string Implosion(string input)
         {
             string ret;
-            if (ImpolosionTable.TryGetValue(input, out ret))
+            if (ImplosionTable.TryGetValue(input, out ret))
                 return ret;
             else
                 return input;
@@ -61,6 +61,11 @@ namespace KoreanTools
         public static string Assimilate(string a, string b)
         {
             string pair = a + b;
+            return Assimilate(pair);
+        }
+
+        public static string Assimilate(string pair)
+        {
             string ret;
             if (AssimilationTable.TryGetValue(pair, out ret))
                 return ret;

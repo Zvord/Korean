@@ -30,6 +30,30 @@ namespace Krucible.Pages
         }
         public void OnGet()
         {
+        }
+
+        [BindProperty]
+        public string UserGuess { get; set; }
+        [BindProperty]
+        public bool NotInTable { get; set; }
+        public static string RandomPair { get; set; }
+        public string Result { get; set; }
+
+        public void OnPostGetRandomPair()
+        {
+            if (NotInTable)
+                RandomPair = DrawPair();
+            else
+                RandomPair = DrawAssimilationPair();
+        }
+
+        public void OnPostCheckAnswer()
+        {
+            string correct = Assimilation.Assimilate(RandomPair);
+            if (UserGuess == correct)
+                Result = "Correct!";
+            else
+                Result = $"Correct : {correct}, looser!";
 
         }
     }
