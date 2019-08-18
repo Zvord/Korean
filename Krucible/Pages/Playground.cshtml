@@ -4,6 +4,13 @@
     ViewData["Title"] = "Playground";
 }
 
-<h1>Playground</h1>
-<h2>@Model.Foo</h2>
-
+<form method="post">
+    <h1>Playground</h1>
+    <input type="text",
+           name="UserInput" />
+    <input type="submit"
+           value="test" /> <br />
+    <h2>User input: @Model.UserInput</h2>
+    <h2>123456789: @Model.Foo</h2>
+    <h2>Correct? @Model.Correct</h2>
+</form>

@@ -12,9 +12,13 @@ namespace Krucible.Pages
     {
         [BindProperty]
         public string Foo { get; set; }
-        public void OnGet()
+        [BindProperty]
+        public string UserInput { get; set; }
+        public bool Correct { get; set; }
+        public void OnPost()
         {
-            Foo = DecomposeHangul.Decompose("안");
+            Foo = DecomposeHangul.ComposeHangul(DecomposeHangul.Decompose(UserInput));
+            Correct = Foo == UserInput;
         }
     }
 }

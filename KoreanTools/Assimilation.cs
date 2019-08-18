@@ -58,10 +58,10 @@ namespace KoreanTools
                 return input;
         }
 
-        public static string Assimilate(string a, string b)
+        public static string Assimilate(char a, char b)
         {
-            string pair = a + b;
-            return Assimilate(pair);
+            char[] pair = { a, b };
+            return Assimilate(new string(pair));
         }
 
         public static string Assimilate(string pair)
@@ -74,5 +74,22 @@ namespace KoreanTools
         }
 
         public static bool HasAssimilation(string input) => AssimilationTable.ContainsKey(input);
+
+        public static string AssimilateLong(string input)
+        {
+            var sb = new StringBuilder(input);
+            for (int i = 0; i < input.Length-2; i++)
+            {
+                var pair = input.Substring(i, 2);
+                string ass;
+                if (AssimilationTable.TryGetValue(pair, out ass))
+                {
+                    sb.Remove(i, 2);
+                    sb.Insert(i, ass);
+                    i++;
+                }
+            }
+            return sb.ToString();
+        }
     }
 }
