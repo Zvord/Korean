@@ -14,8 +14,8 @@
     <label for="NotInTable">Include pairs with no assimilation?</label> <br />
     <input type="submit"
            value="Generate random pair"
-           asp-page-handler="GetRandomPair" /> <br />
-    <h2>@AssimilationModel.RandomPair</h2>
+           asp-page-handler="GetTask" /> <br />
+    <h2>@Model.Task</h2>
     <label for="UserGuess">Your guess:</label>
     <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" />
     <input type="submit"

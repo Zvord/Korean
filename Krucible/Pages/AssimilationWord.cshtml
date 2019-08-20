@@ -15,8 +15,8 @@
 -->
     <input type="submit"
            value="Generate random word"
-           asp-page-handler="GetRandomWord" /> <br />
-    <h2>@AssimilationWordModel.RandomWord</h2>
+           asp-page-handler="GetTask" /> <br />
+    <h2>@Model.Task</h2>
     <label for="UserGuess">Your guess:</label>
     <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" />
     <input type="submit"

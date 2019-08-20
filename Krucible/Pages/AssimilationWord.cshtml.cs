@@ -4,31 +4,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
 
 namespace Krucible.Pages
 {
-    public class AssimilationWordModel : PageModel
+    public class AssimilationWordModel : KruciblePageModel
     {
-        [BindProperty]
-        public string UserGuess { get; set; }
-        public static string RandomWord { get; set; }
-        public string Result { get; set; }
+        protected override string GetTask() => KoreanTools.AssimilationWords.GetRandomWord();
 
-        public void OnPostGetRandomWord()
+        protected override string GetSolution(string input)
         {
-            RandomWord = KoreanTools.AssimilationWords.GetRandomWord();
-        }
-
-        public void OnPostCheckAnswer()
-        {
-            var dec     = KoreanTools.DecomposeHangul.Decompose(RandomWord);
-            var ass     = KoreanTools.Assimilation.AssimilateLong(dec);
+            var dec = KoreanTools.DecomposeHangul.Decompose(input);
+            var ass = KoreanTools.Assimilation.AssimilateLong(dec);
             var correct = KoreanTools.DecomposeHangul.ComposeHangul(ass);
-            if (UserGuess == correct)
-                Result = "Correct!";
-            else
-                Result = $"Correct : {correct}, looser!";
-
+            return correct;
         }
     }
 }

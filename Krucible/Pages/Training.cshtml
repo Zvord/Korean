@@ -21,10 +21,10 @@
            max="9999999999999999"/> <br />
     <input type="submit"
            value="Generate random number"
-           asp-page-handler="RandomNumber"/> <br />
-    <h2>@Model.NumberStr</h2>
+           asp-page-handler="GetTask"/> <br />
+    <h2>@Model.Task</h2>
     <label for="UserTranslation">Your guess:</label>
-    <input type="text", name="UserTranslation" id="UserTranslation" value="@Model.UserTranslation" size="81"/>
+    <input type="text", name="UserTranslation" id="UserTranslation" value="@Model.UserGuess" size="81"/>
     <input type="submit"
            value="Behold!"
            asp-page-handler="CheckAnswer"/>

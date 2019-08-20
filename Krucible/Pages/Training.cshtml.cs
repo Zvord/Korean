@@ -8,48 +8,21 @@ using KoreanTools;
 
 namespace Krucible
 {
-    public class TrainingModel : PageModel
+    public class TrainingModel : KruciblePageModel
     {
         [BindProperty]
         public long Min { get; set; } = 1;
         [BindProperty]
         public long Max { get; set; } = 9999999;
-        static long Number;
-        public string NumberStr { get; set; }
-        [BindProperty]
-        public string UserTranslation { get; set; }
-        public static string Translation { get; set; }
-        public string Result { get; set; } = "";
-        public string UserGuess { get; set; } = "";
 
-        public void OnGet()
-        {
-        }
-
-        public void OnPost()
-        {
-            NumberStr = "1";
-        }
-
-        public void OnPostRandomNumber()
+        protected override string GetTask()
         {
             Random random = new Random();
-            Number = LongRandom(Min, Max, random);
-            NumberStr = Number.ToString();
-            Translation = KoreanTools.SinoKorean.Translate(NumberStr);
+            var n = LongRandom(Min, Max, random);
+            return n.ToString();
         }
 
-        public void OnPostCheckAnswer()
-        {
-            NumberStr = Number.ToString();
-            if (UserTranslation != null && Translation == UserTranslation.Trim())
-                Result = "Correct!";
-            else
-            {
-                UserGuess = $"Your try: {UserTranslation}";
-                Result = $"Correct : {Translation}, looser!";
-            }
-        }
+        protected override string GetSolution(string input) => SinoKorean.Translate(input);
 
         long LongRandom(long min, long max, Random rand)
         {

@@ -8,7 +8,7 @@ using KoreanTools;
 
 namespace Krucible.Pages
 {
-    public class AssimilationModel : PageModel
+    public class AssimilationModel : KruciblePageModel
     {
         const string Consonants = "ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅃㅉㄸㄲㅆ";
         string DrawPair()
@@ -19,42 +19,20 @@ namespace Krucible.Pages
             return Consonants.Substring(i1, 1) + Consonants.Substring(i2, 1);
         }
 
-        string DrawAssimilationPair()
+        string DrawAssimilationPair(bool allPairs)
         {
             string pair;
             do
             {
                 pair = DrawPair();
-            } while (!Assimilation.HasAssimilation(pair));
+            } while (!Assimilation.HasAssimilation(pair) && !allPairs);
             return pair;
         }
-        public void OnGet()
-        {
-        }
 
-        [BindProperty]
-        public string UserGuess { get; set; }
         [BindProperty]
         public bool NotInTable { get; set; }
-        public static string RandomPair { get; set; }
-        public string Result { get; set; }
 
-        public void OnPostGetRandomPair()
-        {
-            if (NotInTable)
-                RandomPair = DrawPair();
-            else
-                RandomPair = DrawAssimilationPair();
-        }
-
-        public void OnPostCheckAnswer()
-        {
-            string correct = Assimilation.Assimilate(RandomPair);
-            if (UserGuess == correct)
-                Result = "Correct!";
-            else
-                Result = $"Correct : {correct}, looser!";
-
-        }
+        protected override string GetTask() => DrawAssimilationPair(NotInTable);
+        protected override string GetSolution(string input) => Assimilation.Assimilate(input);
     }
 }
