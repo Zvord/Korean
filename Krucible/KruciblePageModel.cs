@@ -27,7 +27,7 @@ namespace Krucible
         {
             Task = HttpContext.Session.GetString("Task");
             string correct = GetSolution(Task);
-            if (UserGuess == correct)
+            if (UserGuess.Trim() == correct)
                 Result = "Correct!";
             else
                 Result = $"Correct : {correct}, looser!";
