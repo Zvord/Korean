@@ -7,18 +7,12 @@
 <h1>Assimilation Training in Words</h1>
 
 <form method="post">
-    <!--
-        <input type="checkbox"
-               name="NotInTable"
-               id="NotInTable" />
-        <label for="NotInTable">Include pairs with no assimilation?</label> <br />
-    -->
     <input type="submit"
            value="Generate random word"
            asp-page-handler="GetTask" /> <br />
     <h2>@Model.Task</h2>
     <label for="UserGuess">Your guess:</label>
-    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" />
+    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"/>
     <input type="submit"
            value="Behold!"
            asp-page-handler="CheckAnswer" />

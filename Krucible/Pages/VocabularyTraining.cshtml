@@ -1,0 +1,34 @@
+﻿@page
+@model Krucible.Pages.VocabularyTrainingModel
+@{
+    ViewData["Title"] = "VocabularyTraining";
+}
+
+<h1>VocabularyTraining</h1>
+
+<form method="post">
+    <select name="LessonNumber"
+            asp-for="@Model.SelectedNumber"
+            asp-items="Model.LessonNumbers">
+    </select>
+    <input asp-for="@Model.SelectedNumber" hidden="hidden" />
+    @for (int i = 0; i < Model.LessonNumbers.Count; i++)
+    {
+        <input asp-for="@Model.LessonNumbers[i].Value" hidden="hidden" />
+        <input asp-for="@Model.LessonNumbers[i].Text" hidden="hidden" />
+    }
+
+    <br />
+
+    <input type="submit"
+           value="Generate random word"
+           asp-page-handler="GetTask" /> <br />
+    <h2>@Model.Task</h2>
+    <label for="UserGuess">Your guess:</label>
+    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" />
+    <input type="submit"
+           value="Behold!"
+           asp-page-handler="CheckAnswer" />
+    <h2>@Model.Result</h2>
+
+</form>

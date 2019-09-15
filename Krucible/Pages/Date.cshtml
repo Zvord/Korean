@@ -10,7 +10,12 @@
            value="Generate random date"
            asp-page-handler="RandomDate" /> <br />
     @Html.TextBox("xz", @DateModel.dateTime, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", style = "width: 200px" })
-    <input type="text" , name="UserTranslation" id="UserTranslation" value="@Model.UserTranslation" size="40"/><br/>
+    <input type="text"
+           name="UserTranslation" 
+           id="UserTranslation" 
+           value="@Model.UserTranslation" 
+           size="40"
+           autocomplete="off"/><br/>
     <input type="submit"
            value="Behold!"
            asp-page-handler="CheckAnswer" />
