@@ -11,8 +11,10 @@
            value="Generate random word"
            asp-page-handler="GetTask" /> <br />
     <h2>@Model.Task</h2>
+    <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
     <label for="UserGuess">Your guess:</label>
     <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"/>
+    <input asp-for="@Model.UserGuess" value="@Model.UserGuess" hidden="hidden" />
     <input type="submit"
            value="Behold!"
            asp-page-handler="CheckAnswer" />

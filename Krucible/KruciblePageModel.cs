@@ -12,6 +12,7 @@ namespace Krucible
     {
         [BindProperty]
         public string UserGuess { get; set; }
+        [BindProperty]
         public string Task { get; set; }
         public string Result { get; set; }
 
@@ -19,13 +20,13 @@ namespace Krucible
         public void OnPostGetTask()
         {
             Task = GetTask();
-            HttpContext.Session.SetString("Task", Task);
+            //HttpContext.Session.SetString("Task", Task);
         }
 
         protected abstract string GetSolution(string input);
         public void OnPostCheckAnswer()
         {
-            Task = HttpContext.Session.GetString("Task");
+            //Task = HttpContext.Session.GetString("Task");
             string correct = GetSolution(Task);
             if (UserGuess == null)
                 UserGuess = "";

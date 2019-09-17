@@ -23,10 +23,10 @@
            value="Generate random number"
            asp-page-handler="GetTask"/> <br />
     <h2>@Model.Task</h2>
+    <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
     <label for="UserTranslation">Your guess:</label>
     <input type="text"
-           name="UserTranslation" 
-           id="UserTranslation" 
+           asp-for="@Model.UserGuess"
            value="@Model.UserGuess" 
            size="81"
            autocomplete="off"/>
