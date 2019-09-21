@@ -5,26 +5,78 @@ using System.Threading.Tasks;
 
 namespace Krucible
 {
-    using Vocabulary = Dictionary<string, string>;
+
+    public class ParsingException : Exception
+    {
+        public ParsingException(string message) : base(message) { }
+    }
+
     static public class Sogang_1A_Vocabulary
     {
-        private static Dictionary<string, string> Lesson1;
-        private static Dictionary<string, string> Lesson2;
-        private static Dictionary<string, string> Lesson3;
-        private static Dictionary<string, string> Lesson4;
-        public static Vocabulary Test = new Vocabulary
+        public static List<Vocabulary> Lessons;
+        public static string[] Names = new string[]
         {
-            { "1", "2" },
-            { "3", "4" }
+            "Getting Ready Unit 1",
+            "Getting Ready Unit 2",
+            "Getting Ready Unit 3",
+            "Getting Ready Unit 4",
+            "Unit 1",
+            "Unit 2",
+            "Unit 3",
+            "Unit 4",
+            "Unit 5",
+            "Unit 6"
         };
 
-        public static Vocabulary[] Lessons = new Vocabulary[]
+        public static void Init()
         {
-            Test,
-            Lesson1,
-            Lesson2,
-            Lesson3,
-            Lesson4
-        };
+            Lessons = new List<Vocabulary>();
+            string[] filepaths = System.IO.Directory.GetFiles("Vocabulary");
+            var vocabs = filepaths.Select(fp => ParseFile(fp));
+            foreach (var v in vocabs)
+                Lessons.Add(v);
+        }
+        /// <summary>
+        /// Input string should have format %korean% ; %english% ; %russian%
+        /// Russian may be abcent. Other semicolons are not permitted
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        private static WordEntry ParseString(string input)
+        {
+            var splitted = input.Split(';');
+            if (splitted.Length < 2)
+                throw new ParsingException($"Too little semicolons in string {input}");
+            if (splitted.Length > 3)
+                throw new ParsingException($"Too much semicolons in string {input}");
+            var korean = splitted[0];
+            var english = splitted[1];
+            if (korean == string.Empty)
+                throw new ParsingException($"Empty Korean part in string {input}");
+            if (english == string.Empty)
+                throw new ParsingException($"Empty English part in string {input}");
+            return new WordEntry(korean, english);
+        }
+
+        private static Vocabulary ParseFile(string filepath)
+        {
+            var contents = System.IO.File.ReadAllLines(filepath);
+            IEnumerable<WordEntry> pairs;
+            try
+            {
+                pairs = contents.Select(s => ParseString(s)).ToList();
+            }
+            catch (Exception e)
+            {
+                throw new ParsingException($"When processing file {filepath} got error: {e.Message}");
+            }
+            var vocab = new Vocabulary();
+            foreach(var w in pairs)
+            {
+                vocab.Add(w);
+            }
+            return vocab;
+        }
+
     }
 }

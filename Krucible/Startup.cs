@@ -17,6 +17,7 @@ namespace Krucible
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            Sogang_1A_Vocabulary.Init();
         }
 
         public IConfiguration Configuration { get; }

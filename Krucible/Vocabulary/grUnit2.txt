@@ -1,0 +1,20 @@
+사물;   	Things; Вещи
+볼펜;   	ball pen; Шариковая ручка
+사전;   	dictionary; Словарь
+연필;   	pencil; Карандаш
+의자;   	chair; Стул
+지우개; 	eraser; Ластик
+책; 	    book; Книга
+책상;   	desk; Письменный стол
+필통;   	pencil case; Пенал
+가방;   	bag; Сумка
+구두;   	shoes; Обувь
+복사기; 	photocopier; Копировальная машина
+전자 사전;	electronic dictionary; Электронный словарь
+카메라; 	camera; Фотокамера
+컴퓨터; 	computer; Компьютер
+핸드폰; 	mobile phone; Мобильный телефон
+고마워요;   Thank you (neutral); Спасибо (нейтральное)
+누구 거예요?; Whose is it?; Чьё это?
+제 거예요.;	B: It’s mine.; Это моё
+이게 뭐예요?;	What is this?; Что это?

@@ -1,0 +1,23 @@
+숫자;   	Numbers; Числа
+하나;       one (kor.); 1 (кор.)
+둘;   	    two (kor.); 2  (кор.)
+셋;   	    three (kor.); 3 (кор.)
+넷;   	    four (kor.); 4 (кор.)
+다섯;       five (kor.); 5 (кор.)
+여섯;       six (kor.); 6 (кор.)
+일곱;       seven (kor.); 7 (кор.)
+여덟;       eight (kor.); 8 (кор.)
+아홉;       nine (kor.); 9 (кор.)
+열;   	    ten (kor.); 10 (кор.)
+녹차;   	green tea;
+레몬차; 	lemon tea;
+맥주;   	beer;
+물; 	    water;
+사이다; 	cider, soda;
+오렌지주스; orange juice;
+커피;   	coffee;
+콜라;   	cola;
+감사합니다;	Thank you.;
+미안해요;	I’m sorry.;
+여기요! 레몬차 주세요.; Excuse me! Please give me a cup of lemon tea.;
+여기 있어요.;          Here you are.;

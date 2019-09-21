@@ -1,0 +1,22 @@
+나라; Country; Страна
+독일; Germany; Германия
+러시아;	Russia; Россия
+미국;	The United States; США
+베트남;	Vietnam; Вьетнам
+일본;	Japan; Япония
+중국;	China; Китай
+태국;	Thailand; Тайланд
+한국;	Korea; Корея
+선생님;	teacher; учитель
+요리사;	chef; повар
+사의;	doctor; врач
+생학;	student; студент
+회사원;	office worker; Офисный работник
+반갑습니다.;	Nice to meet you.; Приято познакомиться.
+안녕하세요?;	Hello?; Добрый день.
+이름이 뭐예요?; What is your name?; Как вас зовут?
+이분이 누구예요?; Who is this person?; Кто этот господин/госпожа?
+한국 사람이에요?; Are you a Korean?; Вы кореец?
+네, 한국 사람이에요.; Yes, I am.; Да, я кореец.
+회사원이에요?; Are you an office worker?;
+아니요, 학생이에요.; No, I’m a student.;

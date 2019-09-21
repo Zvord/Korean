@@ -1,0 +1,17 @@
+교실;   	classroom;
+극장;   	cinema, theater;
+대사관; 	embassy;
+도서관; 	library;
+문구점; 	stationary store;
+병원;   	hospital;
+서점;   	bookstore;
+수영장; 	swimming pool;
+식당;   	restaurant;
+은행;   	bank;
+학교;   	school;
+화장실; 	washroom, restroom;
+회사;   	company;
+실례합니다.;	Excuse me.;
+어디에 있어요?;	Where is -?;
+잠실 알아요?;	 Do you know	Jamsil?;
+네，알아요.;	 Yes, I know;

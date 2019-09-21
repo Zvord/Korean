@@ -8,14 +8,13 @@
 
 <form method="post">
     <select name="LessonNumber"
-            asp-for="@Model.SelectedNumber"
-            asp-items="Model.LessonNumbers">
-    </select>
-    <input asp-for="@Model.SelectedNumber" hidden="hidden" />
-    @for (int i = 0; i < Model.LessonNumbers.Count; i++)
+            asp-for="@Model.SelectedLesson"
+            asp-items="Model.LessonsNames"></select>
+    <input asp-for="@Model.SelectedLessonNumber" hidden="hidden" />
+    @for (int i = 0; i < Model.LessonsNames.Count; i++)
     {
-        <input asp-for="@Model.LessonNumbers[i].Value" hidden="hidden" />
-        <input asp-for="@Model.LessonNumbers[i].Text" hidden="hidden" />
+        <input asp-for="@Model.LessonsNames[i].Value" hidden="hidden" />
+        <input asp-for="@Model.LessonsNames[i].Text" hidden="hidden" />
     }
 
     <br />
@@ -30,5 +29,10 @@
            value="Behold!"
            asp-page-handler="CheckAnswer" />
     <h2>@Model.Result</h2>
+
+    <input asp-for="@Model.Korean" value="@Model.Korean" hidden="hidden" />
+    <input asp-for="@Model.English" value="@Model.English" hidden="hidden" />
+    <input asp-for="@Model.Russian" value="@Model.Russian" hidden="hidden" />
+    <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
 
 </form>

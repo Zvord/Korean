@@ -30,7 +30,7 @@ namespace Krucible
             string correct = GetSolution(Task);
             if (UserGuess == null)
                 UserGuess = "";
-            if (UserGuess.Trim() == correct)
+            if (UserGuess.Trim(' ', '.') == correct.Trim(' ', '.'))
                 Result = "Correct!";
             else
                 Result = $"Correct : {correct}, looser!";

@@ -11,30 +11,57 @@ namespace Krucible.Pages
     public class VocabularyTrainingModel : KruciblePageModel
     {
         [BindProperty]
-        public IList<SelectListItem> LessonNumbers { get; set; }
+        public IList<SelectListItem> LessonsNames { get; set; }
         [BindProperty]
-        public string SelectedNumber { get; set; }
+        public int SelectedLessonNumber { get; set; }
+        [BindProperty]
+        public string SelectedLesson { get; set; }
+        [BindProperty]
+        public string Korean { get; set; }
+        [BindProperty]
+        public string English { get; set; }
+        [BindProperty]
+        public string Russian { get; set; }
         public void OnGet()
         {
-            LessonNumbers = new List<SelectListItem>();
-            int max = Sogang_1A_Vocabulary.Lessons.Length;
-            for (int i = 1; i <= max; i++)
-                LessonNumbers.Add(new SelectListItem(i.ToString(), i.ToString()));
-            ViewData["xz"] = new SelectList(LessonNumbers);
-            SelectedNumber = "2";
+            //LessonsNames = new List<SelectListItem>();
+            //int max = Sogang_1A_Vocabulary.Lessons.Count;
+            //for (int i = 1; i <= max; i++)
+            //    LessonsNames.Add(new SelectListItem(i.ToString(), i.ToString()));
+            //ViewData["xz"] = new SelectList(LessonNumbers);
+            //SelectedNumber = "2";
+            LessonsNames = Sogang_1A_Vocabulary.Names.Select(n => new SelectListItem(n, n)).ToList();
         }
         protected override string GetTask()
         {
-            SelectedNumber = Request.Form["LessonNumber"][0];
-            var Vocab = Sogang_1A_Vocabulary.Lessons[Convert.ToInt32(SelectedNumber) - 1];
+            GetSelectedLesson();
+            RestoreSelectedLesson();
+            var Vocab = Sogang_1A_Vocabulary.Lessons[Convert.ToInt32(SelectedLessonNumber) - 1];
             Random r = new Random();
             int index = r.Next(Vocab.Count);
-            return Vocab.Keys.ElementAt(index);
+            var entry = Vocab[index];
+            English = entry.English;
+            Korean = entry.Korean;
+            Russian = entry.Russian;
+            return English;
         }
 
         protected override string GetSolution(string input)
         {
-            return Sogang_1A_Vocabulary.Test[input];
+            RestoreSelectedLesson();
+            return Korean;
+        }
+
+        protected void GetSelectedLesson()
+        {
+            SelectedLesson = Request.Form["LessonNumber"][0];
+            SelectedLessonNumber = Sogang_1A_Vocabulary.Names.ToList().IndexOf(SelectedLesson);
+        }
+        protected void RestoreSelectedLesson()
+        {
+            GetSelectedLesson();
+            var selected = LessonsNames.First(name => name.Text == SelectedLesson);
+            //selected.Selected = true;
         }
     }
 }
