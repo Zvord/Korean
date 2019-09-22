@@ -31,7 +31,20 @@ namespace Krucible
         public static void Init()
         {
             Lessons = new List<Vocabulary>();
-            string[] filepaths = System.IO.Directory.GetFiles("Vocabulary");
+            //string[] filepaths = System.IO.Directory.GetFiles("Vocabulary");
+            string[] filepaths = new string[]
+            {
+                "Vocabulary/001_grUnit1.txt",
+                "Vocabulary/002_grUnit2.txt",
+                "Vocabulary/003_grUnit3.txt",
+                "Vocabulary/004_grUnit4.txt",
+                "Vocabulary/011_Unit1.txt",
+                "Vocabulary/012_Unit2.txt",
+                "Vocabulary/013_Unit3.txt",
+                "Vocabulary/014_Unit4.txt",
+                "Vocabulary/015_Unit5.txt",
+                "Vocabulary/016_Unit6.txt"
+            };
             var vocabs = filepaths.Select(fp => ParseFile(fp));
             foreach (var v in vocabs)
                 Lessons.Add(v);
