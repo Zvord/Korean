@@ -36,34 +36,34 @@
 
 
   <ItemGroup>
-    <None Update="Vocabulary\grUnit1.txt">
+    <None Update="Vocabulary\001_grUnit1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\grUnit2.txt">
+    <None Update="Vocabulary\002_grUnit2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\grUnit3.txt">
+    <None Update="Vocabulary\003_grUnit3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\grUnit4.txt">
+    <None Update="Vocabulary\004_grUnit4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\Unit1.txt">
+    <None Update="Vocabulary\011_Unit1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\Unit2.txt">
+    <None Update="Vocabulary\012_Unit2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\Unit3.txt">
+    <None Update="Vocabulary\013_Unit3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\Unit4.txt">
+    <None Update="Vocabulary\014_Unit4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\Unit5.txt">
+    <None Update="Vocabulary\015_Unit5.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Vocabulary\Unit6.txt">
+    <None Update="Vocabulary\016_Unit6.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
