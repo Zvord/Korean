@@ -24,7 +24,7 @@
            asp-page-handler="GetTask" /> <br />
     <h2>@Model.Task</h2>
     <label for="UserGuess">Your guess:</label>
-    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" />
+    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"/>
     <input type="submit"
            value="Behold!"
            asp-page-handler="CheckAnswer" />
