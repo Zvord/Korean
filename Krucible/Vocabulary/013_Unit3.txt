@@ -41,6 +41,6 @@ _에 오다	;to come to;
 좋다	;to be good, to be nice, to be well;
 재미있다	;to be interesting, to be fun;
 같이	;together;
-〒스	;which, what;
+무슨	;which, what;
 오늘 같이 영화를 봐요. ;Let’s watch a movie together today.;
 요즘 무슨 영화를 해요? ;What movies are playing these days?;

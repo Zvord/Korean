@@ -26,7 +26,9 @@
     <label for="UserGuess">Your guess:</label>
     <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"/>
     <input type="submit"
+           name="userguess"
            value="Behold!"
+           autofocus
            asp-page-handler="CheckAnswer" />
     <h2>@Model.Result</h2>
 

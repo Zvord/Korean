@@ -30,10 +30,17 @@ namespace Krucible
             string correct = GetSolution(Task);
             if (UserGuess == null)
                 UserGuess = "";
-            if (UserGuess.Trim(' ', '.') == correct.Trim(' ', '.'))
+            if (correct == null)
+            {
+                Result = "Very funny. Get a task first.";
+                return;
+            }
+            if (Sanitize(UserGuess) == Sanitize(correct))
                 Result = "Correct!";
             else
                 Result = $"Correct : {correct}, looser!";
         }
+
+        protected string Sanitize(string input) => input.Trim().Trim('.');
     }
 }
