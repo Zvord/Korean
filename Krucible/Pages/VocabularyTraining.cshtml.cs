@@ -36,7 +36,7 @@ namespace Krucible.Pages
         {
             GetSelectedLesson();
             RestoreSelectedLesson();
-            var Vocab = Sogang_1A_Vocabulary.Lessons[Convert.ToInt32(SelectedLessonNumber) - 1];
+            var Vocab = Sogang_1A_Vocabulary.Lessons[SelectedLessonNumber];
             Random r = new Random();
             int index = r.Next(Vocab.Count);
             var entry = Vocab[index];
