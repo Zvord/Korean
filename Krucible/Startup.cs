@@ -28,7 +28,8 @@ namespace Krucible
             //services.AddAuthentication(Microsoft.AspNetCore.Server.IISIntegration.IISDefaults.AuthenticationScheme);
             services.AddSession();
             services.AddMemoryCache();
-            services.AddMvc();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
+            
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
