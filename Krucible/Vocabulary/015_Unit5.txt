@@ -10,7 +10,7 @@
 왼쪽; left; слева
 오른쪽; right; справа
 대화; dialogue; диалог
-공윈; park; парк
+공원; park; парк
 근처; near, nearby; окрестность
 빌딩; building; здание
 열쇠; key; ключ
@@ -22,11 +22,10 @@
 감사합니다; Thank you; спасибо
 아니에요; You're welcome; не за что
 이쪽으로 가세요; Go this way; иди в этом направлении
-읽고말하기; Reading and speaking; чтение и разговор
 대학교; university; универ
 -후; after; после
 휴게실; lounge; комната отдыха
--층; floor; этаж
+층; floor; этаж
 도착하다; to arrive; прибывать
 배우다; to learn; учить(ся)
 돈을 찾다; to withdraw money (from a bank); снимать деньги
@@ -43,4 +42,4 @@
 그런데; but, however; кстати
 다시; again; снова
 돈을 보내다; to send money; отправить деньги
-하지만; but, howerver; но
+하지만; but, howerver (하...); но
