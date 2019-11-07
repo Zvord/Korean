@@ -35,10 +35,16 @@ namespace Krucible
                 Result = "Very funny. Get a task first.";
                 return;
             }
+            bool isCorrect = false;
             if (Sanitize(UserGuess) == Sanitize(correct))
+            {
                 Result = "Correct!";
+                isCorrect = true;
+            }
             else
                 Result = $"Correct : {correct}, looser!";
+            if (isCorrect)
+                OnPostGetTask();
         }
 
         protected string Sanitize(string input) => input.Trim().Trim('.');

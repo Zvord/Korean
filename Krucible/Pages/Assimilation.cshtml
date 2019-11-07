@@ -3,24 +3,34 @@
 @{
     ViewData["Title"] = "Assimilation";
 }
+    <body onload="placeFocus()">
+        <h1>Assimilation</h1>
 
-<h1>Assimilation</h1>
+        <form method="post">
 
-<form method="post">
+            <input type="checkbox"
+                   name="NotInTable"
+                   id="NotInTable" />
+            <label for="NotInTable">Include pairs with no assimilation?</label> <br />
+            <input type="submit"
+                   value="Generate random pair"
+                   asp-page-handler="GetTask" /> <br />
+            <h2>@Model.Task</h2>
+            <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
+            <label for="UserGuess">Your guess:</label>
+            <input type="text"
+                   name="UserGuess"
+                   id="UserGuess"
+                   value="@Model.UserGuess"
+                   autocomplete="off"
+                   onkeydown="KeyPressed(event)" />
+            <input type="submit"
+                   value="Behold!"
+                   id="mainButton"
+                   asp-page-handler="CheckAnswer" />
+            <h2>@Model.UserGuess</h2>
+            <h2>@Model.Result</h2>
 
-    <input type="checkbox"
-           name="NotInTable"
-           id="NotInTable" />
-    <label for="NotInTable">Include pairs with no assimilation?</label> <br />
-    <input type="submit"
-           value="Generate random pair"
-           asp-page-handler="GetTask" /> <br />
-    <h2>@Model.Task</h2>
-    <label for="UserGuess">Your guess:</label>
-    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off" />
-    <input type="submit"
-           value="Behold!"
-           asp-page-handler="CheckAnswer" />
-    <h2>@Model.UserGuess</h2>
-    <h2>@Model.Result</h2>
-</form>
+            <script src="~/js/scripts.js"></script>
+        </form>
+    </body>

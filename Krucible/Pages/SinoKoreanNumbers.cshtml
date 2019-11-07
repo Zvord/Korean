@@ -3,36 +3,44 @@
 @{
     ViewData["Title"] = "Training";
 }
+<body onload="placeFocus()">
+    <form method="post">
+        <label for="Min">Min:</label>
+        <input type="number"
+               name="Min"
+               id="Min"
+               value="@Model.Min"
+               min="1"
+               max="9999999999999999" /> <br />
+        <label for="Max">Max:</label>
+        <input type="number"
+               name="Max"
+               id="Max"
+               value="@Model.Max"
+               min="1"
+               max="9999999999999999" /> <br />
+        <input type="submit"
+               value="Generate random number"
+               asp-page-handler="GetTask" /> <br />
+        <h2>@Model.Task</h2>
+        <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
+        <label for="UserTranslation">Your guess:</label>
+        <input type="text"
+               asp-for="@Model.UserGuess"
+               value="@Model.UserGuess"
+               id="UserGuess"
+               size="81"
+               autocomplete="off"
+               onkeydown="KeyPressed(event)"/>
+        <input type="submit"
+               name="userguess"
+               value="Behold!"
+               id="mainButton"
+               autofocus
+               asp-page-handler="CheckAnswer" />
+        <h2>@Model.UserGuess</h2>
+        <h2>@Model.Result</h2>
 
-<form method="post">
-    <label for="Min">Min:</label>
-    <input type="number"
-           name="Min"
-           id="Min"
-           value="@Model.Min"
-           min="1"
-           max="9999999999999999"/> <br />
-    <label for="Max">Max:</label>
-    <input type="number"
-           name="Max"
-           id="Max"
-           value="@Model.Max"
-           min="1"
-           max="9999999999999999"/> <br />
-    <input type="submit"
-           value="Generate random number"
-           asp-page-handler="GetTask"/> <br />
-    <h2>@Model.Task</h2>
-    <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
-    <label for="UserTranslation">Your guess:</label>
-    <input type="text"
-           asp-for="@Model.UserGuess"
-           value="@Model.UserGuess" 
-           size="81"
-           autocomplete="off"/>
-    <input type="submit"
-           value="Behold!"
-           asp-page-handler="CheckAnswer"/>
-    <h2>@Model.UserGuess</h2>
-    <h2>@Model.Result</h2>
-</form>
+        <script src="~/js/scripts.js"></script>
+    </form>
+</body>

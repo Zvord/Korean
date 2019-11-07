@@ -3,26 +3,33 @@
 @{
     ViewData["Title"] = "AssimilationWord";
 }
+<body onload="placeFocus()">
+    <h1>Assimilation Training in Words</h1>
 
-<h1>Assimilation Training in Words</h1>
+    <form method="post">
+        <input type="submit"
+               value="Generate random word"
+               asp-page-handler="GetTask" /> <br />
+        <h2>@Model.Task</h2>
+        <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
+        <label for="UserGuess">Your guess:</label>
+        <input type="text"
+               name="UserGuess" 
+               id="UserGuess" 
+               value="@Model.UserGuess" 
+               autocomplete="off" 
+               onkeydown="KeyPressed(event)"/>
+        <input asp-for="@Model.UserGuess" value="@Model.UserGuess" hidden="hidden" />
+        <input type="submit"
+               value="Behold!"
+               id="mainButton"
+               asp-page-handler="CheckAnswer" />
+        <h2>@Model.Result</h2>
 
-<form method="post">
-    <input type="submit"
-           value="Generate random word"
-           asp-page-handler="GetTask" /> <br />
-    <h2>@Model.Task</h2>
-    <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
-    <label for="UserGuess">Your guess:</label>
-    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"/>
-    <input asp-for="@Model.UserGuess" value="@Model.UserGuess" hidden="hidden" />
-    <input type="submit"
-           value="Behold!"
-           asp-page-handler="CheckAnswer" />
-    <h2>@Model.Result</h2>
+        <script src="~/js/scripts.js"></script>
 
-
-</form>
-
+    </form>
+</body>
 <head>
     <style>
         table, th, td {

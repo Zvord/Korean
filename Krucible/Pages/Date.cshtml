@@ -4,21 +4,27 @@
     ViewData["Title"] = "Date";
 }
 
-<form method="post">
-    <h1>오늘이 몇년 몇월 며칠이에요?</h1>
-    <input type="submit"
-           value="Generate random date"
-           asp-page-handler="RandomDate" /> <br />
-    @Html.TextBox("xz", @DateModel.dateTime, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", style = "width: 200px" })
-    <input type="text"
-           name="UserTranslation" 
-           id="UserTranslation" 
-           value="@Model.UserTranslation" 
-           size="40"
-           autocomplete="off"/><br/>
-    <input type="submit"
-           value="Behold!"
-           asp-page-handler="CheckAnswer" />
-    <h2>@Model.UserGuess</h2>
-    <h2>@Model.Result</h2>
-</form>
+    <body onload="placeFocus()">
+        <form method="post">
+            <h1>오늘이 몇년 몇월 며칠이에요?</h1>
+            <input type="submit"
+                   value="Generate random date"
+                   asp-page-handler="RandomDate" /> <br />
+            @Html.TextBox("xz", @DateModel.dateTime, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", style = "width: 200px" })
+            <input type="text"
+                   name="UserGuess"
+                   id="UserGuess"
+                   value="@Model.UserTranslation"
+                   size="40"
+                   autocomplete="off" 
+                   onkeydown="KeyPressed(event)"/><br />
+            <input type="submit"
+                   value="Behold!"
+                   id="mainButton"
+                   asp-page-handler="CheckAnswer" />
+            <h2>@Model.UserGuess</h2>
+            <h2>@Model.Result</h2>
+
+            <script src="~/js/scripts.js"></script>
+        </form>
+    </body>

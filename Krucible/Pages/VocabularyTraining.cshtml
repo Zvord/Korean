@@ -4,38 +4,45 @@
     ViewData["Title"] = "VocabularyTraining";
 }
 
-<h1>VocabularyTraining</h1>
+    <body onload="placeFocus()">
+        <h1>VocabularyTraining</h1>
 
-<form method="post">
-    <p>Please write -하다 verbs without 을/를</p>
-    <select name="LessonNumber"
-            asp-for="@Model.SelectedLesson"
-            asp-items="Model.LessonsNames"></select>
-    <input asp-for="@Model.SelectedLessonNumber" hidden="hidden" />
-    @for (int i = 0; i < Model.LessonsNames.Count; i++)
-    {
-        <input asp-for="@Model.LessonsNames[i].Value" hidden="hidden" />
-        <input asp-for="@Model.LessonsNames[i].Text" hidden="hidden" />
-    }
+        <form method="post">
+            <p>Please write -하다 verbs without 을/를</p>
+            <select name="LessonNumber"
+                    asp-for="@Model.SelectedLesson"
+                    asp-items="Model.LessonsNames"></select>
+            <input asp-for="@Model.SelectedLessonNumber" hidden="hidden" />
+            @for (int i = 0; i < Model.LessonsNames.Count; i++)
+            {
+                <input asp-for="@Model.LessonsNames[i].Value" hidden="hidden" />
+                <input asp-for="@Model.LessonsNames[i].Text" hidden="hidden" />
+            }
 
-    <br />
+            <br />
 
-    <input type="submit"
-           value="Generate random word"
-           asp-page-handler="GetTask" /> <br />
-    <h2>@Model.Task</h2>
-    <label for="UserGuess">Your guess:</label>
-    <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"/>
-    <input type="submit"
-           name="userguess"
-           value="Behold!"
-           autofocus
-           asp-page-handler="CheckAnswer" />
-    <h2>@Model.Result</h2>
+            <input type="submit"
+                   value="Generate random word"
+                   asp-page-handler="GetTask" /> <br />
+            <h2>@Model.Task</h2>
+            <label for="UserGuess">Your guess:</label>
+            <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"
+                   onkeydown="KeyPressed(event)" />
+            <input type="submit"
+                   name="userguess"
+                   value="Behold!"
+                   id="mainButton"
+                   autofocus
+                   asp-page-handler="CheckAnswer" />
+            <h2>@Model.Result</h2>
+            <br />
 
-    <input asp-for="@Model.Korean" value="@Model.Korean" hidden="hidden" />
-    <input asp-for="@Model.English" value="@Model.English" hidden="hidden" />
-    <input asp-for="@Model.Russian" value="@Model.Russian" hidden="hidden" />
-    <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
+            <input asp-for="@Model.Korean" value="@Model.Korean" hidden="hidden" />
+            <input asp-for="@Model.English" value="@Model.English" hidden="hidden" />
+            <input asp-for="@Model.Russian" value="@Model.Russian" hidden="hidden" />
+            <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
 
-</form>
+           <script src="~/js/scripts.js"></script> 
+
+        </form>
+    </body>
