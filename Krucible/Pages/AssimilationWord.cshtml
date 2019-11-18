@@ -7,6 +7,8 @@
     <h1>Assimilation Training in Words</h1>
 
     <form method="post">
+        <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+
         <input type="submit"
                value="Generate random word"
                asp-page-handler="GetTask" /> <br />
@@ -14,11 +16,12 @@
         <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
         <label for="UserGuess">Your guess:</label>
         <input type="text"
-               name="UserGuess" 
-               id="UserGuess" 
-               value="@Model.UserGuess" 
-               autocomplete="off" 
-               onkeydown="KeyPressed(event)"/>
+               name="UserGuess"
+               id="UserGuess"
+               value="@Model.UserGuess"
+               autocomplete="off"
+               onkeydown="KeyPressed(event)"
+               autofocus="autofocus" />
         <input asp-for="@Model.UserGuess" value="@Model.UserGuess" hidden="hidden" />
         <input type="submit"
                value="Behold!"

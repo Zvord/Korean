@@ -16,10 +16,9 @@ namespace Krucible
         [BindProperty]
         public static DateTime dateTime { get; set; }
         [BindProperty]
-        public string UserTranslation { get; set; }
-
-        public string Result { get; set; } = "";
-        public string UserGuess { get; set; } = "";
+        public string UserGuess { get; set; }
+        [BindProperty]
+        public string Result { get; set; }
 
         public void OnGet()
         {
@@ -34,7 +33,7 @@ namespace Krucible
             int range = (endDate - startDate).Days;
             dateTime = startDate.AddDays(rand.Next(range));
             dateTimeStr = dateTime.ToString();
-            UserTranslation = "";
+            //UserTranslation = "";
         }
 
         public void OnPostCheckAnswer()
@@ -42,11 +41,11 @@ namespace Krucible
             dateTimeStr = Request.Form["xz"];
             dateTime = DateTime.Parse(dateTimeStr);
             string translation = DateTranslation.Translate(dateTime);
-            if (UserTranslation != null && translation == UserTranslation.Trim())
+            if (UserGuess != null && translation == UserGuess.Trim())
                 Result = "Correct!";
             else
             {
-                UserGuess = $"Your try: {UserTranslation}";
+                UserGuess = $"Your try: {UserGuess}";
                 Result = $"Correct : {translation}, looser!";
             }
         }

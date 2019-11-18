@@ -6,6 +6,8 @@
 
     <body onload="placeFocus()">
         <form method="post">
+            <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+
             <h1>오늘이 몇년 몇월 며칠이에요?</h1>
             <input type="submit"
                    value="Generate random date"
@@ -14,10 +16,11 @@
             <input type="text"
                    name="UserGuess"
                    id="UserGuess"
-                   value="@Model.UserTranslation"
+                   value="@Model.UserGuess"
                    size="40"
-                   autocomplete="off" 
-                   onkeydown="KeyPressed(event)"/><br />
+                   autocomplete="off"
+                   onkeydown="KeyPressed(event)"
+                   autofocus="autofocus" /><br />
             <input type="submit"
                    value="Behold!"
                    id="mainButton"

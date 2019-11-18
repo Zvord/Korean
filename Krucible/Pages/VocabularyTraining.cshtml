@@ -4,10 +4,16 @@
     ViewData["Title"] = "VocabularyTraining";
 }
 
+    <script src="~/js/scripts.js" type="text/javascript">
+    </script>
+
     <body onload="placeFocus()">
+        
+
         <h1>VocabularyTraining</h1>
 
-        <form method="post">
+        <form method="post" onload="placeFocus()">
+            <button type="submit" disabled style="display: none" aria-hidden="true"></button>
             <p>Please write -하다 verbs without 을/를</p>
             <select name="LessonNumber"
                     asp-for="@Model.SelectedLesson"
@@ -27,12 +33,12 @@
             <h2>@Model.Task</h2>
             <label for="UserGuess">Your guess:</label>
             <input type="text" , name="UserGuess" id="UserGuess" value="@Model.UserGuess" autocomplete="off"
-                   onkeydown="KeyPressed(event)" />
+                   onkeydown="KeyPressed(event)"
+                   autofocus="autofocus"/>
             <input type="submit"
                    name="userguess"
                    value="Behold!"
                    id="mainButton"
-                   autofocus
                    asp-page-handler="CheckAnswer" />
             <h2>@Model.Result</h2>
             <br />
@@ -42,7 +48,7 @@
             <input asp-for="@Model.Russian" value="@Model.Russian" hidden="hidden" />
             <input asp-for="@Model.Task" value="@Model.Task" hidden="hidden" />
 
-           <script src="~/js/scripts.js"></script> 
+            
 
         </form>
     </body>

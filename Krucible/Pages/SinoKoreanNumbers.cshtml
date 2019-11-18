@@ -5,6 +5,8 @@
 }
 <body onload="placeFocus()">
     <form method="post">
+        <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+
         <label for="Min">Min:</label>
         <input type="number"
                name="Min"
@@ -31,12 +33,12 @@
                id="UserGuess"
                size="81"
                autocomplete="off"
-               onkeydown="KeyPressed(event)"/>
+               onkeydown="KeyPressed(event)"
+               autofocus="autofocus" />
         <input type="submit"
                name="userguess"
                value="Behold!"
                id="mainButton"
-               autofocus
                asp-page-handler="CheckAnswer" />
         <h2>@Model.UserGuess</h2>
         <h2>@Model.Result</h2>

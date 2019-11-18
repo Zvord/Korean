@@ -4,7 +4,7 @@
     }
 }
 
-function placeFocus() {
+function placeFocus(event) {
     document.getElementById("UserGuess").focus();
     document.getElementById("UserGuess").select();
 }
