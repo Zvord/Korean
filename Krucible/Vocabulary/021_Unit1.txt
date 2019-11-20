@@ -1,59 +1,57 @@
-가깝다; to be close
-벌다; to be far
-길다; to be long
-짧다; to be short
-높다; to be high
-낮다; to be low
-덥다; to be hot
-춥다; to be cold
-밚다; to be many
-적다; to be few
-맛없다; to not be delicious
-비싸다; to be expensive
-싸다; to be cheap
-빠느다; to be fast
-느리다; to be slow
-어렵다; to be difficult
-쉽다; to be easy
-작다; to be small
-크다; to be big
-재미있다; to be interesting
-재미없다; to not be interesting
-좋다; to be good
-나쁘다; to be bad
-
-경치; scenery, view
-날씨; weather
-바다; sea
-박물관; museum
-휴가; vacation, holiday, time off
-낚시하다; to fish, to go fishing
-드라이브하다; to drive
-스쿠버다이빙하다; to scuba dive
-깨끗하다; to be clean
-아름답다; to be beautiful
-출장을 가다; to go on
-다른 약속이 있어요; I have another appointment
-알겠어요; I got it
-가족; family
-생활; life, living
-어머니; mother
-하숙집; boarding house
-학기; term, semester
-돌아가다; to go back, to return to
-연습하다; to practice
-이사하다; to move (to another house)
-불편하다; to be uncomfortable
-친절하다; to be kind, to be considerate
-왜녀하면; because
-그때 만나요; See you then.
-보고 시퍼요; I miss ...
-잘 지내요; I have been well.
-
-구경하다; to watch, to go sightseeing
-나중에; later, after
-또; again
---만; only
-배를 타다; to take a boat
-흔자; alone, by oneself
+가깝다; to be close;
+멀다; to be far;
+길다; to be long;
+짧다; to be short;
+높다; to be high;
+낮다; to be low;
+덥다; to be hot;
+춥다; to be cold;
+밚다; to be many;
+적다; to be few;
+맛없다; to not be delicious;
+비싸다; to be expensive;
+싸다; to be cheap;
+빠느다; to be fast;
+느리다; to be slow;
+어렵다; to be difficult;
+쉽다; to be easy;
+작다; to be small;
+크다; to be big;
+재미있다; to be interesting;
+재미없다; to not be interesting;
+좋다; to be good;
+나쁘다; to be bad;
+경치; scenery, view;
+날씨; weather;
+바다; sea;
+박물관; museum;
+휴가; vacation, holiday, time off;
+낚시하다; to fish, to go fishing;
+드라이브하다; to drive;
+스쿠버다이빙하다; to scuba dive;
+깨끗하다; to be clean;
+아름답다; to be beautiful;
+출장을 가다; to go on;
+다른 약속이 있어요; I have another appointment;
+알겠어요; I got it;
+가족; family;
+생활; life, living;
+어머니; mother;
+하숙집; boarding house;
+학기; term, semester;
+돌아가다; to go back, to return to;
+연습하다; to practice;
+이사하다; to move (to another house);
+불편하다; to be uncomfortable;
+친절하다; to be kind, to be considerate;
+왜녀하면; because;
+그때 만나요; See you then.;
+보고 시퍼요; I miss ...;
+잘 지내요; I have been well.;
+구경하다; to watch, to go sightseeing;
+나중에; later, after;
+또; again;
+--만; only;
+배를 타다; to take a boat;
+흔자; alone, by oneself;
 여행 잘 다녀오세요.; Have a good trip.

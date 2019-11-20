@@ -16,16 +16,17 @@ namespace Krucible
         public static List<Vocabulary> Lessons;
         public static string[] Names = new string[]
         {
-            "Getting Ready Unit 1",
-            "Getting Ready Unit 2",
-            "Getting Ready Unit 3",
-            "Getting Ready Unit 4",
-            "Unit 1",
-            "Unit 2",
-            "Unit 3",
-            "Unit 4",
-            "Unit 5",
-            "Unit 6"
+            "1A Getting Ready Unit 1",
+            "1A Getting Ready Unit 2",
+            "1A Getting Ready Unit 3",
+            "1A Getting Ready Unit 4",
+            "1A Unit 1",
+            "1A Unit 2",
+            "1A Unit 3",
+            "1A Unit 4",
+            "1A Unit 5",
+            "1A Unit 6",
+            "2B Unit 1"
         };
 
         public static void Init()
@@ -43,7 +44,8 @@ namespace Krucible
                 "Vocabulary/013_Unit3.txt",
                 "Vocabulary/014_Unit4.txt",
                 "Vocabulary/015_Unit5.txt",
-                "Vocabulary/016_Unit6.txt"
+                "Vocabulary/016_Unit6.txt",
+                "Vocabulary/021_Unit1.txt"
             };
             var vocabs = filepaths.Select(fp => ParseFile(fp));
             foreach (var v in vocabs)

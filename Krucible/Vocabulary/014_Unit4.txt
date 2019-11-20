@@ -1,6 +1,6 @@
 -일	;day;
 어제	;yesterday;
-오놀	;today;
+오늘	;today;
 내일	;tomorrow;
  주	;week;
 지난주	;last week;
@@ -11,9 +11,9 @@
 이번 달	;this month;
 다음달	;next month;
 년	;year;
-작년	;last year;
-올해	;this year;
-내년	;next year;
+작년	;last year (less official);
+올해	;this year (more official);
+내년	;next year (less official);
 -전	;ago, before;
 신문	;newspaper;
 사다	;to buy;

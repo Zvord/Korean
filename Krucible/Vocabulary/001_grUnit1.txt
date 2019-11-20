@@ -9,8 +9,8 @@
 한국;	Korea; Корея
 선생님;	teacher; учитель
 요리사;	chef; повар
-사의;	doctor; врач
-생학;	student; студент
+의사;	doctor; врач
+학생;	student; студент
 회사원;	office worker; Офисный работник
 반갑습니다.;	Nice to meet you.; Приято познакомиться.
 안녕하세요?;	Hello?; Добрый день.

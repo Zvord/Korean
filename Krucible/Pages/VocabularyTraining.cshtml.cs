@@ -22,6 +22,15 @@ namespace Krucible.Pages
         public string English { get; set; }
         [BindProperty]
         public string Russian { get; set; }
+        [BindProperty]
+        public string txtCustomerId { get; set; }
+        public Vocabulary ReferenceVocab { get; set; }
+        public void OnPostShowWords()
+        {
+            GetSelectedLesson();
+            RestoreSelectedLesson(); // ???
+            ReferenceVocab = Sogang_1A_Vocabulary.Lessons[SelectedLessonNumber];
+        }
         public void OnGet()
         {
             //LessonsNames = new List<SelectListItem>();
@@ -31,6 +40,7 @@ namespace Krucible.Pages
             //ViewData["xz"] = new SelectList(LessonNumbers);
             //SelectedNumber = "2";
             LessonsNames = Sogang_1A_Vocabulary.Names.Select(n => new SelectListItem(n, n)).ToList();
+            ReferenceVocab = new Vocabulary();
         }
         protected override string GetTask()
         {

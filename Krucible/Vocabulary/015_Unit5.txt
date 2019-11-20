@@ -14,7 +14,7 @@
 근처; near, nearby; окрестность
 빌딩; building; здание
 열쇠; key; ключ
-저기; there, that place; там (вдали)
+저기; over there; там (вдали)
 지갑; wallet; бумажник
 편의점; convenience store; круглосуточный магазин
 산책하다; to take a walk; прогуливаться
@@ -30,7 +30,7 @@
 배우다; to learn; учить(ся)
 돈을 찾다; to withdraw money (from a bank); снимать деньги
 일찍; early; рано
-거기; there, that place; там
+거기; there, next to you; там
 동료; co-worker, colleague; коллега
 사무실; office; офис
 케이크; cake; торт
@@ -43,3 +43,4 @@
 다시; again; снова
 돈을 보내다; to send money; отправить деньги
 하지만; but, howerver (하...); но
+여기; here; здесь
