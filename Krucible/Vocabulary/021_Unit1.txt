@@ -6,12 +6,12 @@
 낮다; to be low;
 덥다; to be hot;
 춥다; to be cold;
-밚다; to be many;
+멇다; to be many;
 적다; to be few;
 맛없다; to not be delicious;
 비싸다; to be expensive;
 싸다; to be cheap;
-빠느다; to be fast;
+빠르다; to be fast;
 느리다; to be slow;
 어렵다; to be difficult;
 쉽다; to be easy;
@@ -44,14 +44,14 @@
 이사하다; to move (to another house);
 불편하다; to be uncomfortable;
 친절하다; to be kind, to be considerate;
-왜녀하면; because;
+왜냐하면; because;
 그때 만나요; See you then.;
-보고 시퍼요; I miss ...;
+보고 싶어요; I miss ...;
 잘 지내요; I have been well.;
 구경하다; to watch, to go sightseeing;
 나중에; later, after;
 또; again;
 --만; only;
 배를 타다; to take a boat;
-흔자; alone, by oneself;
+혼자; alone, by oneself;
 여행 잘 다녀오세요.; Have a good trip.

@@ -26,7 +26,7 @@ namespace Krucible
             "1A Unit 4",
             "1A Unit 5",
             "1A Unit 6",
-            "2B Unit 1"
+            "1B Unit 1"
         };
 
         public static void Init()
