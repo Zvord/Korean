@@ -47,6 +47,6 @@ namespace Krucible
                 OnPostGetTask();
         }
 
-        protected string Sanitize(string input) => input.Trim().Trim('.');
+        protected string Sanitize(string input) => input.Trim().Trim('.').Trim('-').Trim('~');
     }
 }
