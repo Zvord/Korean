@@ -6,7 +6,7 @@
 낮다; to be low;
 덥다; to be hot;
 춥다; to be cold;
-멇다; to be many;
+많다; to be many;
 적다; to be few;
 맛없다; to not be delicious;
 비싸다; to be expensive;
