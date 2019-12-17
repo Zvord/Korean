@@ -12,7 +12,7 @@
 티셔츠; T-shirt
 다른 색은 없어요?; Do you have another color?
 다음에 다시 올게요; I will come again next time;
-비지 좀 보여 주세요; Please show me the pants;
+바지 좀 보여 주세요; Please show me the pants;
 얼마예요?; How much is it?
 여기요; Over here.
 이거 주세요; Please give me this one.
@@ -29,7 +29,7 @@
 비빔밥; bibimbap
 이쪽; this side
 물어보다; to ask
-같다; to be save
+같다; to be same
 예쁘다; to be pretty
 유명하다; to be famous
 계속; continuously
