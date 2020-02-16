@@ -6,7 +6,7 @@
 무릎; knee
 발; foot
 배; stomach, abdomen
-어께; shoulder
+어깨; shoulder
 이; tooth
 입; mouth
 코; nose
@@ -19,7 +19,7 @@
 감기에 걸리다; to catch a cold
 건강이 안 좋다; to be in bad health
 병원에 가다; to go to the hospital
-약일 먹다; to take medication
+약을 먹다; to take medication
 열이 나다; to run/have a fever
 빨리 나으세요; Get well soon.
 어디 아프세요?; Are you hurt? / Where are you ill?

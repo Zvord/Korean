@@ -28,7 +28,8 @@ namespace Krucible
             "1A Unit 6",
             "1B Unit 1",
             "1B Unit 2",
-            "1B Unit 3"
+            "1B Unit 3",
+            "1B Unit 4"
         };
 
         public static void Init()
@@ -50,6 +51,7 @@ namespace Krucible
                 "Vocabulary/021_Unit1.txt",
                 "Vocabulary/022_Unit2.txt",
                 "Vocabulary/023_Unit3.txt",
+                "Vocabulary/024_Unit4.txt"
             };
             var vocabs = filepaths.Select(fp => ParseFile(fp));
             foreach (var v in vocabs)
