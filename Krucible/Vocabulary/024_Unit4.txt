@@ -3,7 +3,7 @@
 야구하다; to play baseball
 축구하다; to play soccer
 태권도하다; to do taekwondo
-꼴프를 치다; to play golf
+골프를 치다; to play golf
 탁구를 치다; to play ping-pong
 테니스를 치다; to play tennis
 스케이트를 타다; to skate
@@ -14,7 +14,7 @@
 안내하다; to guide
 배우러 다니다; to attend in order to learn
 일이 많다; to have a lot of work
-나중에 우리 같이 테니스 쳐요; Let's play tennig together later
+나중에 우리 같이 테니스 쳐요; Let's play tennis together later
 시간이 있을 때 뭐 하세요?; When you have free time, what do you do?
 요즘 어떻게 지내세요?; How have you been these days?
 죄송합니다; I'm sorry.
